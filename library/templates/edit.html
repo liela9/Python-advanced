@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="static/css/styles.css">
+        <link rel="icon" href="../static/images/favicon.png">
+        <title>Edit Rating</title>
+    </head>
+
+    <body>
+        <h1>Edit Book's Rating</h1>
+        <table>
+            <tr>
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Parts</th>
+                <th>Current Rating</th>
+            </tr>
+            <tr>
+                <td>{{book['title']}}</td>
+                <td>{{book['author']}}</td>
+                <td>{{book['parts']}}</td>
+                <td>{{book['rating']}}/10.0</td>
+            </tr>
+        </table>
+        <br>
+        <form action="{{ url_for('edit', id=book['id']) }}" method="POST">
+            <label>New Rating:</label>
+            <input class="rating_input" type="text" name="new_rating">
+            <button type="submit">Change Rating</button>
+        </form>
+        <br>
+        <a href="{{ url_for('home') }}">Back To All Books</a>
+    </body>
+
+</html>

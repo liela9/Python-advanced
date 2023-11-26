@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300i,400,400i");
+
+body, input {
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.65;
+    background-image: url("../images/background-img.jpg");
+    color: antiquewhite;
+    margin-right: 1%;
+}
+
+body {
+    margin-left: 3%;
+    margin-top: 3%;
+}
+
+a {
+    color: gray;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+td {
+    font-size: 1.4rem;
+}
+
+td, th {
+  text-align: center;
+}
+
+/* all the <th> inside <tr>, and the <td> inside <tr> */
+tr th, tr td {
+    padding-right: 40px;
+}
+
+button {
+    background: #F4EAE0;
+    background-image: -webkit-linear-gradient(top, #F4EAE0, #F5CCA0);
+    background-image: -moz-linear-gradient(top, #F4EAE0, #F5CCA0);
+    background-image: -ms-linear-gradient(top, #F4EAE0, #F5CCA0);
+    background-image: -o-linear-gradient(top, #F4EAE0, #F5CCA0);
+    background-image: linear-gradient(to bottom, #F4EAE0, #F5CCA0);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 30px;
+}
+
+button:hover {
+    background: #F5CCA0;
+    background-image: -webkit-linear-gradient(top, #F5CCA0, #F4EAE0);
+    background-image: -moz-linear-gradient(top, #F5CCA0, #F4EAE0);
+    background-image: -ms-linear-gradient(top, #F5CCA0, #F4EAE0);
+    background-image: -o-linear-gradient(top, #F5CCA0, #F4EAE0);
+    background-image: linear-gradient(to bottom, #F5CCA0, #F4EAE0);
+    text-decoration: none;
+}
+
+.new_book_entry {
+    text-align: left;
+}
+
+.rating_input {
+    width: 70px;
+    margin: 10px;
+}
