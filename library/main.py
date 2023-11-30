@@ -47,9 +47,9 @@ def add():
             new_book = Book(id=counter, title=request.form['title'], author=request.form['author'], parts=request.form['parts'],rating=request.form['rating'])
             session.add(new_book)
             session.commit()
-            all_books = session.query(Book).all()
-            return render_template('index.html', all_books=all_books)
+            return home()
         except:
+            session.rollback()
             return render_template('error.html', message="This book already exists in your library.")
     return render_template('add.html')
 
@@ -61,9 +61,9 @@ def edit():
         try:
             book.rating = request.form['new_rating']
             session.commit()
-            all_books = session.query(Book).all()
-            return render_template('index.html', all_books=all_books)
+            return home()
         except:
+            session.rollback()
             return render_template('error.html', message="Rating must be a number.")
     
     return render_template('edit.html', book=book)
@@ -74,12 +74,7 @@ def delete():
     book = session.query(Book).filter_by(id=book_id).first()
     session.delete(book)
     session.commit()
-    all_books = session.query(Book).all()
-    return render_template('index.html', all_books=all_books)
-
-@app.route('/error')
-def error():
-    return render_template('error.html')
+    return home()
 
 
 if __name__ == "__main__":
