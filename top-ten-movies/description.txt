@@ -1,0 +1,12 @@
+Description:
+A local website with my top ten movies.
+
+Built with:
+Python
+HTML
+CSS
+Bootstrap
+Flask
+WTForms
+SQLAlchemy
+requests module
