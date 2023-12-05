@@ -1,0 +1,12 @@
+Description:
+A blog.
+
+Built with:
+Python
+Bootstrap
+Flask
+sqlalchemy
+WTForms
+
+
+using "startbootstrap.com" template for the frontend.
