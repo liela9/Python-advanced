@@ -1,0 +1,10 @@
+Description:
+Basic authentication app with Flask framework.
+
+Built with:
+Python
+HTML
+SQLAlchemy
+Flask
+Bootstrap
+werkzeug.security
